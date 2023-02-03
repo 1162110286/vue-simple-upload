@@ -86,7 +86,7 @@ module.exports = class {
       const [hash] = fields.md5;
       const [filename] = fields.fileName;
       console.log('handleFileChunk -> filename', filename);
-      const filePath = path.resolve(UPLOAD_DIR, `${hash}`);
+      const filePath = path.resolve(UPLOAD_DIR, `${hash}/${filename}`);
       const chunkDir = path.resolve(UPLOAD_DIR, hash);
 
       // 文件存在直接返回
