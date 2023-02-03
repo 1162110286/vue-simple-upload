@@ -490,7 +490,8 @@ export default {
         const obj = {
           md5: data.fileHash,
           fileName: data.name,
-          fileChunkNum: data.chunkList.length,
+          // fileChunkNum: data.chunkList.length,
+          fileChunkNum: chunkSize, // 应该改成一个切片的大小
           ...this.uploadArguments
         };
 
